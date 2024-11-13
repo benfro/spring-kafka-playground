@@ -1,0 +1,58 @@
+#spring:
+#  application:
+#    name: spring-kafka-playground-2
+#  cloud:
+#    function:
+#      definition: function
+#    stream:
+#      bindings:
+#        consumer-in-0:
+#          destination: user-events
+#          group: some-group
+#        function-in-0:
+#          destination: user-events
+#          group: some-group
+---
+#spring:
+#  application:
+#    name: spring-kafka-playground-2
+#  cloud:
+#    function:
+#      definition: function
+#    stream:
+#      bindings:
+#        consumer-in-0:
+#          destination: user-events
+#          group: some-group
+#        function-in-0:
+#          destination: user-events
+#          group: some-group
+#      kafka:
+#        binder:
+#          #configuration:
+#          #producer-properties:
+#          #stuff
+#          consumer-properties:
+#            "group.instance.id": "123"
+---
+spring:
+  application:
+    name: spring-kafka-playground-2
+  cloud:
+    function:
+      definition: function
+    stream:
+      bindings:
+        consumer-in-0:
+          destination: user-events
+          group: some-group
+        function-in-0:
+          destination: user-events
+          group: some-group
+      kafka:
+        bindings:
+          function-in-0:
+            consumer:
+              configuration:
+                "group.instance.id": "888"
+
