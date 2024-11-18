@@ -24,7 +24,9 @@ import reactor.test.StepVerifier;
 @TestPropertySource(properties = {
     "sec=sec01",
     "spring.cloud.function.definition=consumer;testProducer",
-    "spring.cloud.stream.bindings.testProducer-out-0.destination=user-events"
+    "spring.cloud.stream.bindings.testProducer-out-0.destination=user-events",
+    "logging.level.root=ERROR",
+    "logging.level.net.benfro*=INFO"
 })
 @ExtendWith(OutputCaptureExtension.class)
 class KafkaConsumerTest extends AbstractIntegrationTest {
