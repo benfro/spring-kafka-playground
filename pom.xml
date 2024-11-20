@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.benfro.lab</groupId>
-	<artifactId>spring-kafka-course2</artifactId>
+	<artifactId>playground-course2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-kafka-playground-2</name>
 	<description>Demo project for Spring Boot</description>
